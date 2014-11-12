@@ -7,7 +7,7 @@ indent() {
 echo "-----> Install ffmpeg"
 BUILD_DIR=$1
 VENDOR_DIR="vendor"
-DOWNLOAD_URL="https://s3-us-west-2.amazonaws.com/data-vizzy/ffmpeg"
+DOWNLOAD_URL="https://s3-us-west-2.amazonaws.com/data-vizzy/ffmpeg-2.4.3-64bit-static.tar.xz"
 #DOWNLOAD_URL="http://hyperhyper.github.io/grizzly-ffmpeg/ffmpeg.tar.gz"
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
@@ -21,5 +21,5 @@ echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:vendor"' >> $PROFILE_PATH
-echo 'chmod 700 ./vendor/ffmpeg' >> $PROFILE_PATH
+#echo 'chmod 700 ./vendor/ffmpeg' >> $PROFILE_PATH
 #echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib"' >> $PROFILE_PATH
