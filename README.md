@@ -5,9 +5,8 @@ This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) fo
 It doesn't do anything else, so to actually compile your app you should use [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) to combine it with a real buildpack.
 
 This is a static build of ffmpeg:
-
-    ./configuration --cc=/usr/bin/clang --prefix=/Users/tessus/data/ext/ffmpeg/sw --as=yasm --extra-version=tessus --disable-shared --enable-static --disable-ffplay --enable-gpl --enable-pthreads --enable-postproc --enable-libmp3lame --enable-libtheora --enable-libvorbis --enable-libx264 --enable-libx265 --enable-libxvid --enable-libspeex --enable-bzlib --enable-zlib --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libxavs --enable-libsoxr --enable-libwavpack --enable-version3 --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-libvpx --enable-libgsm --enable-libopus --enable-libmodplug --enable-fontconfig --enable-libfreetype --enable-libass --enable-libbluray --enable-filters --disable-indev=qtkit --disable-indev=x11grab_xcb --enable-runtime-cpudetect
     
+    ./configuration: --enable-gpl --enable-version3 --disable-shared --disable-debug --enable-runtime-cpudetect --enable-libmp3lame --enable-libx264 --enable-libx265 --enable-libwebp --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libfreetype --enable-fontconfig --enable-libxvid --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libtheora --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-gray --enable-libopenjpeg --enable-libopus --disable-ffserver --enable-libass --enable-gnutls --cc=gcc-4.8
 
   libavutil      54.  7.100 / 54.  7.100
   libavcodec     56.  1.100 / 56.  1.100
