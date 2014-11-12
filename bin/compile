@@ -20,6 +20,6 @@ curl -L --silent $DOWNLOAD_URL | tar xz
 echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:vendor"' >> $PROFILE_PATH
+echo 'export PATH="$PATH:vendor/ffmpeg-2.4.3-64bit-static"' >> $PROFILE_PATH
 #echo 'chmod 700 ./vendor/ffmpeg' >> $PROFILE_PATH
 #echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/ffmpeg/lib"' >> $PROFILE_PATH
